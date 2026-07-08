@@ -38,6 +38,8 @@ function SvgLogoPiece({
   canvasWidth: number;
   canvasHeight: number;
 }) {
+  const isNarrowI = piece.id === "1-966" || piece.id === "1-954";
+
   return (
     <Image
       src={`/figma/${piece.id}.svg`}
@@ -47,7 +49,7 @@ function SvgLogoPiece({
       aria-hidden="true"
       width={Math.ceil(piece.w)}
       height={Math.ceil(piece.h)}
-      className="logo-reveal absolute select-none"
+      className={`logo-reveal absolute select-none ${isNarrowI ? "logo-no-glow" : ""}`}
       style={{
         animationDelay: `${index * 0.06}s`,
         height: `${(piece.h / canvasHeight) * 100}%`,
