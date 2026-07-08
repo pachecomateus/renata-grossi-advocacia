@@ -42,6 +42,8 @@ function SvgLogoPiece({
     <Image
       src={`/figma/${piece.id}.svg`}
       alt=""
+      quality={100}
+      priority
       aria-hidden="true"
       width={Math.ceil(piece.w)}
       height={Math.ceil(piece.h)}
@@ -69,6 +71,7 @@ export default function Home() {
             alt=""
             width={200}
             height={111}
+            quality={100}
             priority
             className="logo-reveal h-auto w-[clamp(7.75rem,14vw,12.5rem)] select-none"
             style={{
