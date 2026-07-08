@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-elms-sans);
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +22,63 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-elms-sans), Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.font-gonya {
+  font-family: var(--font-gonya), Georgia, serif;
+}
+
+.font-elms {
+  font-family: var(--font-elms-sans), Arial, Helvetica, sans-serif;
+}
+
+.logo-reveal {
+  animation:
+    kf_1_964_opacity_0 8s linear,
+    kf_1_964_translate_0 8s linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+
+@keyframes kf_1_964_opacity_0 {
+  0% {
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes kf_1_964_translate_0 {
+  0% {
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    translate: 0 18px;
+  }
+
+  10% {
+    translate: 0 0;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-reveal {
+    animation: none;
+    opacity: 1;
+  }
 }
