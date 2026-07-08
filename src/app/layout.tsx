@@ -36,7 +36,7 @@ const elmsSans = localFont({
 
 export const metadata: Metadata = {
   title: "Renata Grossi Advocacia",
-  description: "Site em construção da Renata Grossi Advocacia.",
+  description: "Especialista em Direito Previdenciário.",
   icons: {
     icon: [{ url: "/figma/simbolo-dourado.svg", type: "image/svg+xml" }],
     shortcut: ["/figma/simbolo-dourado.svg"],

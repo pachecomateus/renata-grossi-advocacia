@@ -1,30 +1,30 @@
 import Image from "next/image";
 
 const wordmarkPieces = [
-  { id: "1-956", x: 0, y: 2.59, w: 77, h: 81 },
-  { id: "1-957", x: 73.8, y: 2.59, w: 73, h: 81 },
-  { id: "1-958", x: 145.74, y: 2.59, w: 78, h: 81 },
-  { id: "1-959", x: 219.04, y: 2.59, w: 94, h: 81 },
-  { id: "1-960", x: 291.37, y: 2.59, w: 76, h: 81 },
-  { id: "1-961", x: 347.69, y: 2.59, w: 94, h: 81 },
-  { id: "1-967", x: 465.44, y: 0.09, w: 86, h: 84 },
-  { id: "1-962", x: 551.09, y: 2.59, w: 76, h: 81 },
-  { id: "1-963", x: 623.15, y: 0, w: 91, h: 84 },
-  { id: "1-964", x: 708.97, y: 0.09, w: 80, h: 84 },
-  { id: "1-965", x: 784.62, y: 0.09, w: 80, h: 84 },
-  { id: "1-966", x: 864.33, y: 2.59, w: 25, h: 81 },
+  { id: "1-956", x: 0, y: 2.29, w: 56.58, h: 60.72 },
+  { id: "1-957", x: 74.54, y: 2.29, w: 52.22, h: 60.72 },
+  { id: "1-958", x: 146.14, y: 2.29, w: 57.86, h: 60.72 },
+  { id: "1-959", x: 220.16, y: 2.29, w: 73.07, h: 60.72 },
+  { id: "1-960", x: 292.88, y: 2.29, w: 55.43, h: 60.72 },
+  { id: "1-961", x: 348.13, y: 2.29, w: 73.07, h: 60.72 },
+  { id: "1-967", x: 466.02, y: 0, w: 65.07, h: 63.06 },
+  { id: "1-962", x: 551.18, y: 2.29, w: 55.17, h: 60.72 },
+  { id: "1-963", x: 623.13, y: 0.03, w: 70.11, h: 63.03 },
+  { id: "1-964", x: 709.32, y: 0.01, w: 59.95, h: 63.07 },
+  { id: "1-965", x: 785.25, y: 0.01, w: 59.95, h: 63.07 },
+  { id: "1-966", x: 864.39, y: 2.29, w: 4.61, h: 60.72 },
 ] as const;
 
 const subtitlePieces = [
-  { id: "1-947", x: 0, y: 0.5, w: 32, h: 30 },
-  { id: "1-948", x: 28.62, y: 0.5, w: 30, h: 30 },
-  { id: "1-949", x: 53.5, y: 0.5, w: 31, h: 30 },
-  { id: "1-950", x: 79.45, y: 0, w: 32, h: 31 },
-  { id: "1-951", x: 108.19, y: 0, w: 31, h: 31 },
-  { id: "1-952", x: 134.1, y: 0.5, w: 32, h: 30 },
-  { id: "1-953", x: 160.68, y: 0, w: 31, h: 31 },
-  { id: "1-954", x: 188.56, y: 0.5, w: 15, h: 30 },
-  { id: "1-955", x: 199.74, y: 0.5, w: 32, h: 30 },
+  { id: "1-947", x: 0, y: 0.45, w: 19.75, h: 17.73 },
+  { id: "1-948", x: 28.75, y: 0.45, w: 17.49, h: 17.73 },
+  { id: "1-949", x: 53.43, y: 0.45, w: 18.9, h: 17.73 },
+  { id: "1-950", x: 79.4, y: 0, w: 19.85, h: 18.62 },
+  { id: "1-951", x: 108.36, y: 0, w: 18.41, h: 18.63 },
+  { id: "1-952", x: 134.1, y: 0.45, w: 19.75, h: 17.73 },
+  { id: "1-953", x: 160.85, y: 0, w: 18.41, h: 18.63 },
+  { id: "1-954", x: 189.2, y: 0.45, w: 2.46, h: 17.73 },
+  { id: "1-955", x: 200.67, y: 0.45, w: 19.75, h: 17.73 },
 ] as const;
 
 function SvgLogoPiece({
@@ -42,7 +42,7 @@ function SvgLogoPiece({
     <Image
       src={`/figma/${piece.id}.svg`}
       alt=""
-      quality={100}
+      unoptimized
       priority
       aria-hidden="true"
       width={Math.ceil(piece.w)}
@@ -71,7 +71,7 @@ export default function Home() {
             alt=""
             width={200}
             height={111}
-            quality={100}
+            unoptimized
             priority
             className="logo-reveal h-auto w-[clamp(7.75rem,14vw,12.5rem)] select-none"
             style={{
@@ -83,36 +83,36 @@ export default function Home() {
 
           <div
             aria-hidden="true"
-            className="relative mt-[clamp(3rem,5.4vw,3.6rem)] aspect-[889.33/84.09] w-full max-w-[889px]"
+            className="relative mt-[clamp(3rem,5.4vw,3.6rem)] aspect-[869/63.08] w-full max-w-[869px]"
           >
             {wordmarkPieces.map((piece, index) => (
               <SvgLogoPiece
                 key={piece.id}
                 piece={piece}
                 index={index}
-                canvasWidth={889.33}
-                canvasHeight={84.09}
+                canvasWidth={869}
+                canvasHeight={63.08}
               />
             ))}
           </div>
 
           <div
             aria-hidden="true"
-            className="relative mt-[clamp(1.8rem,3.1vw,2.1rem)] aspect-[231.74/31] w-[min(48vw,190px)] sm:w-[min(60vw,232px)]"
+            className="relative mt-[clamp(1.3rem,3.1vw,2.1rem)] aspect-[220.42/18.63] w-[25.36%] max-w-[220px]"
           >
             {subtitlePieces.map((piece, index) => (
               <SvgLogoPiece
                 key={piece.id}
                 piece={piece}
                 index={wordmarkPieces.length + index}
-                canvasWidth={231.74}
-                canvasHeight={31}
+                canvasWidth={220.42}
+                canvasHeight={18.63}
               />
             ))}
           </div>
         </div>
 
-        <p className="font-gonya mt-[clamp(4rem,12vw,8rem)] text-center text-[clamp(1.45rem,6.4vw,2rem)] leading-none">
+        <p className="font-gonya mt-[clamp(4rem,12vw,8rem)] text-center text-[clamp(1.2rem,5.4vw,2rem)] leading-none">
           <span className="font-extralight">Site em </span>
           <strong className="font-medium">construção</strong>
         </p>

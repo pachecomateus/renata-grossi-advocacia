@@ -43,6 +43,7 @@ body {
     kf_1_964_translate_0 8s linear;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
+  filter: drop-shadow(0 0 3px rgba(237, 193, 136, 0.28));
   opacity: 0;
 }
 
